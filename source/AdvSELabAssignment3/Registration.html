@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Mashup2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link rel="stylesheet" href="RegistrationPageStyle.css">
+    <title>Registration Page</title>
+    <script>
+        function registration()
+        {
+            if(document.getElementById('fn').value.length>0 && document.getElementById('ln').value.length>0 && document.getElementById('username').value.length>0 && document.getElementById('email').value.length>0 && document.getElementById('password').value.length>0 && document.getElementById('cpassword').value.length>0 &&
+                ( document.getElementById('cpassword').value ==document.getElementById('password').value))
+            {
+                localStorage.setItem('UserName',(document.getElementById('username').value));
+                localStorage.setItem('Password',(document.getElementById('password').value));
+                window.location.href='LoginPage.html';
+            }
+            else
+            {
+                alert('Dear user, you have missed entering few details !');
+            }
+        }
+    </script>
+    <style>
+        h3{
+            font-size: 26px;
+            color: mediumspringgreen;
+        }
+    </style>
+</head>
+<body background="redcolor.jpg">
+<form>
+    <div align="center">
+        <h3><b>YouTube Yandex App Registration</b></h3>
+        <table align="center">
+            <tr>
+                <td><h4>FirstName:</h4></td>
+                <td><input id="fn" style="border: solid" type="text"  name="firstName" placeholder="First name" size="10" value=""/></td>
+            </tr>
+            <tr>
+                <td><h4>LastName:</h4></td>
+                <td><input id="ln" type="text" style="border: solid" name="lastName" placeholder="Last name" size="10" value=""/></td>
+            </tr>
+            <tr>
+                <td><h4>LastName:</h4></td>
+                <td><input id="username" type="text" style="border: solid" name="username" placeholder="Enter UserName" size="23" ></td>
+            </tr>
+            <tr>
+                <td><h4>EmailId:</h4></td>
+                <td><input id="email" type="email" style="border: solid" name="email" placeholder="Email" size=23></td>
+            </tr>
+            <tr>
+                <td><h4>Password:</h4></td>
+                <td><input id="password" style="border: solid" type="password" name="password12" placeholder="Create password" size=23></td>
+            </tr>
+            <tr>
+                <td><h4>Confirm Password:</h4></td>
+                <td><input id="cpassword" style="border: solid" type="password" name="password11" placeholder="Confirm your password" size=23></td>
+            </tr>
+        </table>
+        <br>
+        <br>
+        <br>
+
+        <input type="button" style="border: solid" name="Register" value="Register" onclick="registration()">
+    </div>
+
+
+
+</form>
+</body>
