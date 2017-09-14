@@ -72,12 +72,12 @@ a:hover {
     visibility: hidden;
 }
 #results {
-    font-size: 14px;
+    font-size: 8px;
     font-weight: bold;
     border: 1px solid #ddd;
-    padding: 15px;
+    padding: 6px;
     text-align: left;
-    min-height: 150px;
+    min-height: 60px;
 }
 #start_button {
     border: 0;
